@@ -57,10 +57,16 @@
     <ClInclude Include="Counsellor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="File.h">
+    <ClInclude Include="Score.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FileOperations.h">
+    <ClInclude Include="ScoreAnalysis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Course.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Class.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

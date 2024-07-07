@@ -99,9 +99,11 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Class.h" />
     <ClInclude Include="Counsellor.h" />
-    <ClInclude Include="FileOperations.h" />
-    <ClInclude Include="File.h" />
+    <ClInclude Include="Course.h" />
+    <ClInclude Include="ScoreAnalysis.h" />
+    <ClInclude Include="Score.h" />
     <ClInclude Include="Secretary.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Teacher.h" />
