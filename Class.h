@@ -11,11 +11,3 @@ public:
 	string TeaName;//教师姓名
 };
 
-/*
-管理教学班信息文件的类
-*/
-class Class_File
-{
-public:
-
-};

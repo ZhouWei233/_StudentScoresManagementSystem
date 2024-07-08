@@ -92,9 +92,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Counsellor.cpp" />
+    <ClCompile Include="Teacher.cpp" />
     <QtRcc Include="StudentScoresManagementSystem.qrc" />
     <QtUic Include="StudentScoresManagementSystem.ui" />
     <QtMoc Include="StudentScoresManagementSystem.h" />
+    <ClCompile Include="Secretary.cpp" />
+    <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentScoresManagementSystem.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
