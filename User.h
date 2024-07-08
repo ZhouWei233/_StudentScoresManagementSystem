@@ -15,13 +15,9 @@ public:
 	string password = "";//密码
 	string name = ""; //姓名
 
-};
-
-/*
-管理用户信息文件的类
-*/
-class User_File
-{
-public:
+	void ModifyPassword()//修改密码
+	{
+		
+	}
 
 };

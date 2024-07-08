@@ -12,5 +12,4 @@ public:
 	string courseID;//课程号
 	string courseName;//课程名
 	int credit;//学分
-
 };

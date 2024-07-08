@@ -1,40 +1,30 @@
 #include "Secretary.h"
 
-void Secretary::ImportStuInfo()
+//添加信息
+void Secretary::AddInfo()
 {
 
 }
 
-void Secretary::ImportTeaInfo()
+//删除信息
+void Secretary::DeleteInfo()
 {
 
 }
 
-void Secretary::ImportClassInfo()
+//修改信息
+void Secretary::ModifyInfo()
 {
 
 }
 
-void Secretary::ModifyStuInfo()
-{
-
-}
-
-void Secretary::ModifyTeaInfo()
-{
-
-}
-
-void Secretary::ModifyClassInfo()
-{
-
-}
-
+//审核成绩
 void Secretary::CheckScores()
 {
 
 }
 
+//查看成绩
 void Secretary::ViewScores()
 {
 
