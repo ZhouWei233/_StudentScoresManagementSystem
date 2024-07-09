@@ -11,7 +11,7 @@ void Teacher::ShowClass()
 	for (auto stu : FO.Data)
 	{
 		stuTotal.push_back(stu);
-		if (classNum.find(stu.courseID) == classNum.end())
+		if (find(classNum.begin(),classNum.end(),stu.courseID) == classNum.end())
 			classNum.push_back(stu.courseID);
 	}
 	map<string, vector<Item>> ClassAndStudent;//每个课头对应的学生名单
@@ -21,7 +21,7 @@ void Teacher::ShowClass()
 		{
 			if (course == stu.courseID)
 			{
-				ClassAndStudent[course].push(stu);
+				ClassAndStudent[course].push_back(stu);
 			}
 		}
 	}
@@ -36,7 +36,7 @@ void Teacher::ShowClass()
 	while (true)
 	{
 		string num; cin >> num;
-		if (classNum.find(num) == classNum.end())
+		if (find(classNum.begin(), classNum.end(), num) == classNum.end())
 		{
 			cout << "输入有误，请重新输入" << endl;
 			continue;
@@ -60,7 +60,7 @@ void Teacher::GiveScores()
 	for (auto stu : FO.Data)
 	{
 		stuTotal.push_back(stu);
-		if (classNum.find(stu.courseID) == classNum.end())
+		if (find(classNum.begin(), classNum.end(), stu.courseID) == classNum.end())
 			classNum.push_back(stu.courseID);
 	}
 	map<string, vector<Item>> ClassAndStudent;//每个课头对应的学生名单
@@ -70,7 +70,7 @@ void Teacher::GiveScores()
 		{
 			if (course == stu.courseID)
 			{
-				ClassAndStudent[course].push(stu);
+				ClassAndStudent[course].push_back(stu);
 			}
 		}
 	}
@@ -85,7 +85,7 @@ void Teacher::GiveScores()
 	while (true)
 	{
 		string num; cin >> num;
-		if (classNum.find(num) == classNum.end())
+		if (find(classNum.begin(), classNum.end(), num) == classNum.end())
 		{
 			cout << "输入有误，请重新输入" << endl;
 			continue;
@@ -112,7 +112,7 @@ void Teacher::SubmitScores()
 	for (auto stu : FO.Data)
 	{
 		stuTotal.push_back(stu);
-		if (classNum.find(stu.courseID) == classNum.end())
+		if (find(classNum.begin(), classNum.end(), stu.courseID) == classNum.end())
 			classNum.push_back(stu.courseID);
 	}
 	map<string, vector<Item>> ClassAndStudent;//每个课头对应的学生名单
@@ -122,7 +122,7 @@ void Teacher::SubmitScores()
 		{
 			if (course == stu.courseID)
 			{
-				ClassAndStudent[course].push(stu);
+				ClassAndStudent[course].push_back(stu);
 			}
 		}
 	}
@@ -136,7 +136,7 @@ void Teacher::SubmitScores()
 	while (true)
 	{
 		string num; cin >> num;
-		if (classNum.find(num) == classNum.end())
+		if (find(classNum.begin(), classNum.end(), num) == classNum.end())
 		{
 			cout << "输入有误，请重新输入" << endl;
 			continue;
@@ -151,6 +151,7 @@ void Teacher::SubmitScores()
 	}
 
 	cout << "确认是否上传" << endl;
+
 }
 
 //修改成绩(成绩被教秘打回后)
@@ -168,7 +169,7 @@ void Teacher::ShowScores()
 	for (auto stu : FO.Data)
 	{
 		stuTotal.push_back(stu);
-		if (classNum.find(stu.courseID) == classNum.end())
+		if (find(classNum.begin(), classNum.end(), stu.courseID) == classNum.end())
 			classNum.push_back(stu.courseID);
 	}
 	map<string, vector<Item>> ClassAndStudent;//每个课头对应的学生名单
@@ -178,7 +179,7 @@ void Teacher::ShowScores()
 		{
 			if (course == stu.courseID)
 			{
-				ClassAndStudent[course].push(stu);
+				ClassAndStudent[course].push_back(stu);
 			}
 		}
 	}
@@ -192,7 +193,7 @@ void Teacher::ShowScores()
 	while (true)
 	{
 		string num; cin >> num;
-		if (classNum.find(num) == classNum.end())
+		if (find(classNum.begin(), classNum.end(), num) == classNum.end())
 		{
 			cout << "输入有误，请重新输入" << endl;
 			continue;
