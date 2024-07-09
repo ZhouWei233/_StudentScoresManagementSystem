@@ -1,11 +1,9 @@
 #include"Student.h"
-
+extern FileOperation FO;//创建一个文件操作对象，用于读写文件内数据
 
 //查看成绩
 void Student::ViewScores()
 {
-	FileOperation FO;//创建一个文件操作对象，用于读写文件内数据
-
 	vector<Item> myItems;//从文件中截取出该学生的信息
 	vector<pair<int, float>> scores;//用于存放该学生的成绩(第一项：分数 第二项：学分)
 	for (auto e : FO.Data)

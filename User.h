@@ -6,6 +6,8 @@
 #include<fstream>
 using namespace std;
 #include<string>
+#include<map>
+#include<algorithm>
 #include<vector>
 
 #include"FileOperation.h"
