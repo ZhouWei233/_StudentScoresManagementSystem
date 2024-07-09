@@ -1,59 +1,59 @@
 #include "Secretary.h"
 
-// Ìí¼ÓĞÅÏ¢
+// æ·»åŠ ä¿¡æ¯
 void Secretary::AddInfo()
 {
-    FileOperation fileOper; // ´´½¨FileOperationÊµÀıÀ´²Ù×÷ÎÄ¼ş
+    FileOperation fileOper; // åˆ›å»ºFileOperationå®ä¾‹æ¥æ“ä½œæ–‡ä»¶
 
     string courseID, courseName, teaName, stuID, stuName;
     float credit;
     int score;
 
-    cout << "ÇëÊäÈë¿Î³ÌºÅ: ";
+    cout << "è¯·è¾“å…¥è¯¾ç¨‹å·: ";
     cin >> courseID;
-    cout << "ÇëÊäÈë¿Î³ÌÃû: ";
+    cout << "è¯·è¾“å…¥è¯¾ç¨‹å: ";
     cin >> courseName;
-    cout << "ÇëÊäÈëÑ§·Ö: ";
+    cout << "è¯·è¾“å…¥å­¦åˆ†: ";
     cin >> credit;
-    cout << "ÇëÊäÈë½ÌÊ¦Ãû: ";
+    cout << "è¯·è¾“å…¥æ•™å¸ˆå: ";
     cin >> teaName;
-    cout << "ÇëÊäÈëÑ§ÉúÑ§ºÅ: ";
+    cout << "è¯·è¾“å…¥å­¦ç”Ÿå­¦å·: ";
     cin >> stuID;
-    cout << "ÇëÊäÈëÑ§ÉúĞÕÃû: ";
+    cout << "è¯·è¾“å…¥å­¦ç”Ÿå§“å: ";
     cin >> stuName;
-    cout << "ÇëÊäÈë³É¼¨: ";
+    cout << "è¯·è¾“å…¥æˆç»©: ";
     cin >> score;
 
     Item newItem(courseID, courseName, credit, teaName, stuID, stuName, score);
     fileOper.Data.push_back(newItem);
 
-    fileOper.UpdateFile(); // ¸üĞÂÎÄ¼ş
-    cout << "ĞÅÏ¢Ìí¼Ó³É¹¦£¡" << endl;
+    fileOper.UpdateFile(); // æ›´æ–°æ–‡ä»¶
+    cout << "ä¿¡æ¯æ·»åŠ æˆåŠŸï¼" << endl;
 }
 
-// É¾³ıĞÅÏ¢
+// åˆ é™¤ä¿¡æ¯
 void Secretary::DeleteInfo()
 {
-    FileOperation fileOper; // ´´½¨FileOperationÊµÀıÀ´²Ù×÷ÎÄ¼ş
+    FileOperation fileOper; // åˆ›å»ºFileOperationå®ä¾‹æ¥æ“ä½œæ–‡ä»¶
 
     string courseID, courseName, teaName, stuID, stuName;
     float credit;
     int score;
 
-    cout << "ÇëÊäÈëÒªÉ¾³ıµÄĞÅÏ¢£º\n";
-    cout << "¿Î³ÌºÅ: ";
+    cout << "è¯·è¾“å…¥è¦åˆ é™¤çš„ä¿¡æ¯ï¼š\n";
+    cout << "è¯¾ç¨‹å·: ";
     cin >> courseID;
-    cout << "¿Î³ÌÃû: ";
+    cout << "è¯¾ç¨‹å: ";
     cin >> courseName;
-    cout << "Ñ§·Ö: ";
+    cout << "å­¦åˆ†: ";
     cin >> credit;
-    cout << "½ÌÊ¦Ãû: ";
+    cout << "æ•™å¸ˆå: ";
     cin >> teaName;
-    cout << "Ñ§ÉúÑ§ºÅ: ";
+    cout << "å­¦ç”Ÿå­¦å·: ";
     cin >> stuID;
-    cout << "Ñ§ÉúĞÕÃû: ";
+    cout << "å­¦ç”Ÿå§“å: ";
     cin >> stuName;
-    cout << "³É¼¨: ";
+    cout << "æˆç»©: ";
     cin >> score;
 
     Item targetItem(courseID, courseName, credit, teaName, stuID, stuName, score);
@@ -73,104 +73,104 @@ void Secretary::DeleteInfo()
     if (it != fileOper.Data.end())
     {
         fileOper.Data.erase(it);
-        fileOper.UpdateFile(); // ¸üĞÂÎÄ¼ş
-        cout << "ĞÅÏ¢É¾³ı³É¹¦£¡" << endl;
+        fileOper.UpdateFile(); // æ›´æ–°æ–‡ä»¶
+        cout << "ä¿¡æ¯åˆ é™¤æˆåŠŸï¼" << endl;
     }
     else
     {
-        cout << "Î´ÕÒµ½Æ¥ÅäµÄĞÅÏ¢¡£" << endl;
+        cout << "æœªæ‰¾åˆ°åŒ¹é…çš„ä¿¡æ¯ã€‚" << endl;
     }
 }
 
-// ĞŞ¸ÄĞÅÏ¢
+// ä¿®æ”¹ä¿¡æ¯
 void Secretary::ModifyInfo()
 {
-    FileOperation fileOper; // ´´½¨FileOperationÊµÀıÀ´²Ù×÷ÎÄ¼ş
+    FileOperation fileOper; // åˆ›å»ºFileOperationå®ä¾‹æ¥æ“ä½œæ–‡ä»¶
 
     string stuID;
-    cout << "ÇëÊäÈëÒªĞŞ¸ÄµÄÑ§ÉúÑ§ºÅ: ";
+    cout << "è¯·è¾“å…¥è¦ä¿®æ”¹çš„å­¦ç”Ÿå­¦å·: ";
     cin >> stuID;
 
     for (auto &item : fileOper.Data)
     {
         if (item.stuID == stuID)
         {
-            cout << "ÇëÊäÈëĞÂµÄ¿Î³ÌºÅ(µ±Ç°Öµ£º" << item.courseID << "): ";
+            cout << "è¯·è¾“å…¥æ–°çš„è¯¾ç¨‹å·(å½“å‰å€¼ï¼š" << item.courseID << "): ";
             cin >> item.courseID;
-            cout << "ÇëÊäÈëĞÂµÄ¿Î³ÌÃû(µ±Ç°Öµ£º" << item.courseName << "): ";
+            cout << "è¯·è¾“å…¥æ–°çš„è¯¾ç¨‹å(å½“å‰å€¼ï¼š" << item.courseName << "): ";
             cin >> item.courseName;
-            cout << "ÇëÊäÈëĞÂµÄÑ§·Ö(µ±Ç°Öµ£º" << item.credit << "): ";
+            cout << "è¯·è¾“å…¥æ–°çš„å­¦åˆ†(å½“å‰å€¼ï¼š" << item.credit << "): ";
             cin >> item.credit;
-            cout << "ÇëÊäÈëĞÂµÄ½ÌÊ¦Ãû(µ±Ç°Öµ£º" << item.teaName << "): ";
+            cout << "è¯·è¾“å…¥æ–°çš„æ•™å¸ˆå(å½“å‰å€¼ï¼š" << item.teaName << "): ";
             cin >> item.teaName;
-            cout << "ÇëÊäÈëĞÂµÄÑ§ÉúĞÕÃû(µ±Ç°Öµ£º" << item.stuName << "): ";
+            cout << "è¯·è¾“å…¥æ–°çš„å­¦ç”Ÿå§“å(å½“å‰å€¼ï¼š" << item.stuName << "): ";
             cin >> item.stuName;
-            cout << "ÇëÊäÈëĞÂµÄ³É¼¨(µ±Ç°Öµ£º" << item.score << "): ";
+            cout << "è¯·è¾“å…¥æ–°çš„æˆç»©(å½“å‰å€¼ï¼š" << item.score << "): ";
             cin >> item.score;
 
-            fileOper.UpdateFile(); // ¸üĞÂÎÄ¼ş
-            cout << "ĞÅÏ¢ĞŞ¸Ä³É¹¦£¡" << endl;
+            fileOper.UpdateFile(); // æ›´æ–°æ–‡ä»¶
+            cout << "ä¿¡æ¯ä¿®æ”¹æˆåŠŸï¼" << endl;
             return;
         }
     }
-    cout << "Î´ÕÒµ½¸ÃÑ§ÉúµÄĞÅÏ¢¡£" << endl;
+    cout << "æœªæ‰¾åˆ°è¯¥å­¦ç”Ÿçš„ä¿¡æ¯ã€‚" << endl;
 }
 
-// ÉóºË³É¼¨
+// å®¡æ ¸æˆç»©
 void Secretary::CheckScores()
 {
 }
 
-// ²é¿´³É¼¨
+// æŸ¥çœ‹æˆç»©
 void Secretary::ViewScores(int select)
 {
-    FileOperation fileOper; // ´´½¨FileOperationÊµÀıÀ´²Ù×÷ÎÄ¼ş
+    FileOperation fileOper; // åˆ›å»ºFileOperationå®ä¾‹æ¥æ“ä½œæ–‡ä»¶
 
-    // 1¡¢°´ÕÕÑ§ÉúÎªµ¥Î»£¬´òÓ¡³öÃ¿¸öÈËµÄ¸÷ÃÅ¿Î³ÌµÄ³É¼¨
+    // 1ã€æŒ‰ç…§å­¦ç”Ÿä¸ºå•ä½ï¼Œæ‰“å°å‡ºæ¯ä¸ªäººçš„å„é—¨è¯¾ç¨‹çš„æˆç»©
     if (select == 1)
     {
         string stuID;
-        cout << "ÇëÊäÈëÑ§ÉúÑ§ºÅ: ";
+        cout << "è¯·è¾“å…¥å­¦ç”Ÿå­¦å·: ";
         cin >> stuID;
         for (const auto &item : fileOper.Data)
         {
             if (item.stuID == stuID)
             {
-                cout << "¿Î³ÌºÅ: " << item.courseID << ", ¿Î³ÌÃû: " << item.courseName
-                     << ", Ñ§·Ö: " << item.credit << ", ½ÌÊ¦: " << item.teaName
-                     << ", ³É¼¨: " << item.score << endl;
+                cout << "è¯¾ç¨‹å·: " << item.courseID << ", è¯¾ç¨‹å: " << item.courseName
+                     << ", å­¦åˆ†: " << item.credit << ", æ•™å¸ˆ: " << item.teaName
+                     << ", æˆç»©: " << item.score << endl;
             }
         }
     }
 
-    // 2¡¢°´ÕÕ¿Î³ÌÍ·Îªµ¥Î»£¬·Ö±ğ´òÓ¡Ã¿¸ö¿Î³ÌµÄÑ§ÉúµÄ¸ÃÃÅ¿ÎµÄ³É¼¨
+    // 2ã€æŒ‰ç…§è¯¾ç¨‹å¤´ä¸ºå•ä½ï¼Œåˆ†åˆ«æ‰“å°æ¯ä¸ªè¯¾ç¨‹çš„å­¦ç”Ÿçš„è¯¥é—¨è¯¾çš„æˆç»©
     if (select == 2)
     {
         string courseID;
-        cout << "ÇëÊäÈë¿Î³ÌºÅ: ";
+        cout << "è¯·è¾“å…¥è¯¾ç¨‹å·: ";
         cin >> courseID;
         for (const auto &item : fileOper.Data)
         {
             if (item.courseID == courseID)
             {
-                cout << "Ñ§ÉúÑ§ºÅ: " << item.stuID << ", Ñ§ÉúÃû: " << item.stuName
-                     << ", ³É¼¨: " << item.score << endl;
+                cout << "å­¦ç”Ÿå­¦å·: " << item.stuID << ", å­¦ç”Ÿå: " << item.stuName
+                     << ", æˆç»©: " << item.score << endl;
             }
         }
     }
 
-    // 3¡¢°´ÕÕ¿Î³ÌÃû×ÖÎªµ¥Î»£¬´òÓ¡¸ÃÃÅ¿ÎËùÓĞÑ§ÉúµÄ³É¼¨
+    // 3ã€æŒ‰ç…§è¯¾ç¨‹åå­—ä¸ºå•ä½ï¼Œæ‰“å°è¯¥é—¨è¯¾æ‰€æœ‰å­¦ç”Ÿçš„æˆç»©
     if (select == 3)
     {
         string courseName;
-        cout << "ÇëÊäÈë¿Î³ÌÃû: ";
+        cout << "è¯·è¾“å…¥è¯¾ç¨‹å: ";
         cin >> courseName;
         for (const auto &item : fileOper.Data)
         {
             if (item.courseName == courseName)
             {
-                cout << "Ñ§ÉúÑ§ºÅ: " << item.stuID << ", Ñ§ÉúÃû: " << item.stuName
-                     << ", ³É¼¨: " << item.score << endl;
+                cout << "å­¦ç”Ÿå­¦å·: " << item.stuID << ", å­¦ç”Ÿå: " << item.stuName
+                     << ", æˆç»©: " << item.score << endl;
             }
         }
     }
