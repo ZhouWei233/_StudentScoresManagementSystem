@@ -105,6 +105,7 @@
   <ItemGroup>
     <ClInclude Include="Counsellor.h" />
     <ClInclude Include="Course.h" />
+    <ClInclude Include="FileOperation.hpp" />
     <ClInclude Include="Secretary.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Teacher.h" />

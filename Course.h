@@ -11,5 +11,5 @@ class Course
 public:
 	string courseID;//课程号
 	string courseName;//课程名
-	int credit;//学分
+	float credit;//学分(可能有0.5,3.5学分)
 };
