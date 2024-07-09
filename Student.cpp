@@ -1,6 +1,13 @@
 #include"Student.h"
 extern FileOperation FO;//创建一个文件操作对象，用于读写文件内数据
 
+Student::Student(string account, string password, string name)
+{
+	this->account = account;
+	this->password = password;
+	this->name = name;
+}
+
 //查看成绩
 void Student::ViewScores()
 {

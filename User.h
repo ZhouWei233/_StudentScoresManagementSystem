@@ -16,7 +16,8 @@ using namespace std;
 class User
 {
 public:
-	User(string name, string password) : name(name), password(password) {};
+	User() {};
+	User(string account, string password,string name) :account(account), name(name), password(password) {};
 
 	string account = ""; //’À∫≈
 	string password = "";//√‹¬Î

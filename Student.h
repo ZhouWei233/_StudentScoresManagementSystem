@@ -7,5 +7,6 @@
 class Student :public User
 {
 public:
+	Student(string account, string password, string name);
 	void ViewScores();//²é¿´³É¼¨
 };

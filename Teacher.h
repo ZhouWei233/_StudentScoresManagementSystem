@@ -7,6 +7,7 @@
 class Teacher : public User
 {
 public:
+	Teacher(string account, string password, string name);
 	void ShowClass();//查看教学班信息
 	void GiveScores();//给学生打分
 	void SubmitScores();//提交成绩（以教学班为单位）

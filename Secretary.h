@@ -8,6 +8,7 @@
 class Secretary : public User
 {
 public:
+	Secretary(string account, string password, string name);
 	void AddInfo();	   //添加信息
 	void DeleteInfo(); //删除信息
 	void ModifyInfo(); //修改信息

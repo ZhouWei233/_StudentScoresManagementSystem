@@ -2,6 +2,14 @@
 
 extern FileOperation FO;//创建一个文件操作对象，用于读写文件内数据
 
+Teacher::Teacher(string account, string password, string name)
+{
+	this->account = account;
+	this->password = password;
+	this->name = name;
+}
+
+
 //查看教学班信息
 void Teacher::ShowClass()
 {

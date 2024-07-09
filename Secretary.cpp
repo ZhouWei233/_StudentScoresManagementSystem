@@ -1,5 +1,12 @@
 #include "Secretary.h"
 
+Secretary::Secretary(string account, string password, string name)
+{
+	this->account = account;
+	this->password = password;
+	this->name = name;
+}
+
 //лМ╪спео╒
 void Secretary::AddInfo()
 {
