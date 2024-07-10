@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 using namespace std;
-#define File "MainFile.txt"
+#define File "test_file.txt"
 
 //文件中的一条信息
 class Item
