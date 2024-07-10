@@ -1,34 +1,16 @@
 #include"Student.h"
-<<<<<<< HEAD
 
-=======
-extern FileOperation FO;//创建一个文件操作对象，用于读写文件内数据
-
-Student::Student(string account, string password, string name)
-{
-	this->account = account;
-	this->password = password;
-	this->name = name;
-}
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 
 //查看成绩
 void Student::ViewScores()
 {
-<<<<<<< HEAD
 	FileOperation FO;//创建一个文件操作对象，用于读写文件内数据
 
-=======
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 	vector<Item> myItems;//从文件中截取出该学生的信息
 	vector<pair<int, float>> scores;//用于存放该学生的成绩(第一项：分数 第二项：学分)
 	for (auto e : FO.Data)
 	{
-<<<<<<< HEAD
 		if (e.stuName== this->name)
-=======
-		if (e.stuName == this->name)
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 		{
 			myItems.push_back(e);
 			scores.push_back(make_pair(e.score, e.credit));
@@ -40,28 +22,16 @@ void Student::ViewScores()
 
 	for (auto e : myItems)
 	{
-<<<<<<< HEAD
 		cout<<e.courseName<<" "<<e.score<<endl;
 	}
 
 	cout<<"均分：" << Ave << endl;
 	cout<<"GPA：" << GPA << endl;
-=======
-		cout << e.courseName << " " << e.score << endl;
-	}
-
-	cout << "均分：" << Ave << endl;
-	cout << "GPA：" << GPA << endl;
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 
 }
 
 //计算均分
-<<<<<<< HEAD
 float CalculateAverage(vector<pair<int,float>> scores)
-=======
-float Student::CalculateAverage(vector<pair<int, float>> scores)
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 {
 	float totalScores = 0;//总学分绩（分数*学分）
 	float totalCredits = 0;//总学分
@@ -74,11 +44,7 @@ float Student::CalculateAverage(vector<pair<int, float>> scores)
 }
 
 //计算GPA
-<<<<<<< HEAD
 float CalculateGPA(vector<pair<int, float>> scores)
-=======
-float Student::CalculateGPA(vector<pair<int, float>> scores)
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 {
 	//将分数转换为绩点
 	float arr[100];
@@ -99,21 +65,13 @@ float Student::CalculateGPA(vector<pair<int, float>> scores)
 	{
 		arr[i] = 0.0;
 	}
-<<<<<<< HEAD
 	for (;i < 64;i++)
-=======
-	for (; i < 64; i++)
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 	{
 		arr[i] = 1.0;
 	}
 	for (; i < 68; i++)
 	{
-<<<<<<< HEAD
 		arr[i]= 1.5;
-=======
-		arr[i] = 1.5;
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 	}
 	for (; i < 72; i++)
 	{
@@ -146,19 +104,11 @@ float Student::CalculateGPA(vector<pair<int, float>> scores)
 
 	//计算GPA
 	float GP = 0.0;//总学分绩点(绩点*学分)
-<<<<<<< HEAD
 	float totalCredits;//总学分
 	for (auto e : scores)
 	{
 		GP += arr[e.first] * e.second;
 		totalCredits+=e.second;
-=======
-	float totalCredits=0.0;//总学分
-	for (auto e : scores)
-	{
-		GP += arr[e.first] * e.second;
-		totalCredits += e.second;
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 	}
 	return GP / totalCredits;
 }

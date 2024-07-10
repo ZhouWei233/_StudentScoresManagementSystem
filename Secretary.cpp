@@ -1,6 +1,5 @@
 #include "Secretary.h"
 
-<<<<<<< HEAD
 // 娣诲姞淇℃伅
 void Secretary::AddInfo()
 {
@@ -175,41 +174,4 @@ void Secretary::ViewScores(int select)
             }
         }
     }
-=======
-Secretary::Secretary(string account, string password, string name)
-{
-	this->account = account;
-	this->password = password;
-	this->name = name;
-}
-
-//添加信息
-void Secretary::AddInfo()
-{
-
-}
-
-//删除信息
-void Secretary::DeleteInfo()
-{
-
-}
-
-//修改信息
-void Secretary::ModifyInfo()
-{
-
-}
-
-//审核成绩
-void Secretary::CheckScores()
-{
-
-}
-
-//查看成绩
-void Secretary::ViewScores()
-{
-
->>>>>>> f9df26ee91b5a85b30e0477b631874906c983228
 }
