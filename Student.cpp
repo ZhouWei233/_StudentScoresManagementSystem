@@ -36,7 +36,7 @@ void Student::ViewScores()
 }
 
 //计算均分
-float CalculateAverage(vector<pair<int, float>> scores)
+float Student::CalculateAverage(vector<pair<int, float>> scores)
 {
 	float totalScores = 0;//总学分绩（分数*学分）
 	float totalCredits = 0;//总学分
@@ -49,7 +49,7 @@ float CalculateAverage(vector<pair<int, float>> scores)
 }
 
 //计算GPA
-float CalculateGPA(vector<pair<int, float>> scores)
+float Student::CalculateGPA(vector<pair<int, float>> scores)
 {
 	//将分数转换为绩点
 	float arr[100];
@@ -109,7 +109,7 @@ float CalculateGPA(vector<pair<int, float>> scores)
 
 	//计算GPA
 	float GP = 0.0;//总学分绩点(绩点*学分)
-	float totalCredits;//总学分
+	float totalCredits=0.0;//总学分
 	for (auto e : scores)
 	{
 		GP += arr[e.first] * e.second;

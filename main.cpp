@@ -14,7 +14,12 @@ FileOperation FO;//创建一个文件操作对象，用于读写文件内数据
 int main()
 {
 	Teacher tea( "01001","王艳", "123456");
+//	tea.ShowClass();
+//	tea.GiveScores();
+//	tea.SubmitScores();
+//	tea.ShowScores();
 	Student stu("2023001011", "李明", "123456");
 	stu.ViewScores();
+	system("pause");
 	return 0;
 }
